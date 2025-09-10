@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ora</title>
+  <link rel="icon" href="icons/favicon.ico">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#06b6d4" />
+</head>
+<body>
+  <!-- Oath Modal -->
+   <div id="task"></div>
+  <div id="oathModal" class="modal-overlay" style="display:none;">
+    <div class="modal">
+      <h2>🙏Swear to God</h2>
+      <p>Do You promise to follow this schedule sincerely without cheating?</p>
+      <div class="modal-actions">
+        <button id="oathAccept" class="btn-accent">Yes, I Swear✨</button>
+        <button id="oathCancel">Not Now🥺</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Ora🌟</h1>
+    <p>“Moments of Effort, Lifetime of Success.”🏆💕</p>
+  </header>
+
+  <!-- Settings -->
+  <section class="settings">
+  <h2>⚙️Notification Settings</h2>
+  <div class="setting">
+    <label for="ringtoneInput">Choose Notification Ringtone:</label>
+    <input type="file" id="ringtoneInput" accept="audio/*" />
+    <button id="saveRingtoneBtn">Save Ringtone</button>
+    <button id="testRingtoneBtn" class="btn-accent">Preview Sound</button>
+  </div>
+  <div class="setting">
+    <label for="taskRingtoneInput">Optional: Assign Ringtone for Current Task:</label>
+    <input type="file" id="taskRingtoneInput" accept="audio/*" />
+  </div>
+</section>
+
+
+  <!-- Daily Schedule -->
+  <section>
+    <h2>📅Today’s Schedule:</h2>
+    <div id="calendar"></div>
+  </section>
+
+  <!-- Log -->
+  <section>
+    <h2>📖Activity Log:</h2>
+    <div id="log"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

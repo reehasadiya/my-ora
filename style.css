@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #170a05e2;
+  color: #1e0404;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+header h1 {
+  font-family:Broadway;
+  font-size:100px;
+  color: #e9e9df;
+}
+header p {
+  font-style:italic;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  color: #f8f1f1;
+  margin-top: 0.3rem;
+}
+
+/* Sections */
+section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #fce8cb48;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Settings */
+.settings h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.setting {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: #322707f1;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background:#856f3a;
+}
+button:disabled {
+  background: #f8f7f2;
+}
+.btn-accent {
+  background: #382007;
+}
+.btn-accent:hover {
+  background: #856f3a;
+}
+
+/* Tasks */
+#calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.task {
+  padding: 0.8rem;
+  border: 1px solid #fbfbfb;
+  border-radius: 0.8rem;
+  background: #a99c93;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task strong {
+  color: #1f0404;
+}
+.task button {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+}
+
+/* Log */
+#log {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #c89f9f;
+}
+#log p {
+  margin: 0.2rem 0;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal {
+  background:white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  animation: pop 0.3s ease;
+}
+.modal h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #3e2315;
+}
+.modal p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.modal-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+/* Animations */
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Reward Modal */
+.modal h2::after {
+  content: " 🎉";
+}
+.modal button {
+  margin-top: 0.5rem;
+}
